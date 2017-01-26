@@ -361,7 +361,7 @@ var zoomPlugin = {
 
 		if (Hammer) {
 			var mc = new Hammer.Manager(node);
-			mc.add(new Hammer.Pinch());
+			mc.add(new Hammer.Pinch({ threshold: 0, pointers: 0 ));
 			mc.add(new Hammer.Pan({
 				threshold: panThreshold
 			}));
